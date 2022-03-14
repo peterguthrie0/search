@@ -25,17 +25,26 @@
     </nav>
 
 
-    <div class="container">
+    <div class="d-flex container vh-100 align-items-start flex-column">
         <form action="https://www.google.com/search">
-            All of these words:
-            <input type="text" name="as_q">
-            This exact word or phrase:
-            <input type="text" name="as_epq">
-            Any of these words (e.g. Amazon OR Google):
-            <input type="text" name="as_oq">
+          <div class="form-group mb-2 mt-2">
+            <label for="allTheseWords"> All of these words:</label>
+            <input type="text" name="as_q" id="allTheseWords" class="form-control">
+          </div>
+          <div class="form-group mb-2">
+            <label for="exactWord">This exact word or phrase:</label>
+            <input type="text" name="as_epq" id="exactWord" class="form-control">
+          </div>
+          <div class="form-group mb-2">
+            <label for="anyWords">Any of these words:</label>
+            <input type="text" name="as_oq" id="anyWords" class="form-control">
+          </div>
+          <div class="form-group mb-2">
+            <label for="noneWords">None of these words:</label>
             None of these words:
-            <input type="text" name="as_eq">
-            <input type="submit" value="Google Search">
+            <input type="text" name="as_eq" id="noneWords" class="form-control">
+          </div>
+          <input type="submit" value="Search" class="btn btn-primary">
         </form>
     </div>
 </body>
